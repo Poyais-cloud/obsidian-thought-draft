@@ -1,0 +1,14 @@
+node_modules
+dist
+.env
+.env.local
+.DS_Store
+data/knowledge.json
+data/knowledge.emb.bin
+data/sessions
+data/vault.json
+server/data/knowledge.json
+server/data/vault.json
+server/data/sessions
+*.log
+tsconfig.tsbuildinfo

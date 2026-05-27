@@ -1,0 +1,79 @@
+/* Theme CSS variables — ported from the Next.js project */
+
+:root {
+  --bg: #eef1ea;
+  --surface: #faf9f4;
+  --border: #d8ddd3;
+  --text: #353b31;
+  --text-muted: #889082;
+  --accent: #7185a8;
+  --accent-soft: #eef1f7;
+  --accent-warm: #bc8f7e;
+  --accent-warm-soft: #faf4ef;
+  --user-bubble: #7185a8;
+  --user-text: #ffffff;
+  --vault-study: #5b7b6f;
+  --vault-study-bg: #e8f0ec;
+  --vault-life: #7b9e6d;
+  --vault-life-bg: #eef5ea;
+  --vault-blog: #b8956a;
+  --vault-blog-bg: #faf3ea;
+}
+
+html.cyberpunk {
+  --bg: #0a0a0c;
+  --surface: #141418;
+  --border: #2c2c32;
+  --text: #e8e8ec;
+  --text-muted: #b0b0b8;
+  --accent: #c9a64c;
+  --accent-soft: #1c1a10;
+  --accent-warm: #d4b058;
+  --accent-warm-soft: #1c1810;
+  --user-bubble: #c9a64c;
+  --user-text: #0a0a0c;
+  --vault-study: #a8b8c8;
+  --vault-study-bg: #101418;
+  --vault-life: #a8bca0;
+  --vault-life-bg: #101410;
+  --vault-blog: #c9a64c;
+  --vault-blog-bg: #1c1a10;
+}
+
+body {
+  margin: 0;
+  background: var(--bg);
+  color: var(--text);
+  font-family: 'Inter', system-ui, -apple-system, sans-serif;
+  letter-spacing: -0.01em;
+}
+
+::-webkit-scrollbar { width: 5px; }
+::-webkit-scrollbar-track { background: transparent; }
+::-webkit-scrollbar-thumb { background: var(--border); border-radius: 3px; }
+::-webkit-scrollbar-thumb:hover { background: var(--text-muted); }
+
+/* Markdown body styles */
+.markdown-body h1 { font-size: 1.3em; font-weight: 700; margin: 0.6em 0 0.25em; letter-spacing: -0.02em; }
+.markdown-body h2 { font-size: 1.1em; font-weight: 600; margin: 0.5em 0 0.2em; }
+.markdown-body h3 { font-size: 1em; font-weight: 600; margin: 0.4em 0 0.15em; }
+.markdown-body p { margin: 0.3em 0; line-height: 1.75; }
+.markdown-body ul, .markdown-body ol { padding-left: 1.3em; margin: 0.2em 0; }
+.markdown-body li { margin: 0.08em 0; line-height: 1.65; }
+.markdown-body li::marker { color: var(--accent); }
+.markdown-body code { background: var(--accent-soft); padding: 0.1em 0.3em; border-radius: 3px; font-size: 0.85em; font-family: 'JetBrains Mono', 'Fira Code', monospace; }
+.markdown-body pre { padding: 0.7em 0.9em; border-radius: 8px; overflow-x: auto; margin: 0.4em 0; border: 1px solid var(--border); background: var(--bg); }
+.markdown-body pre code { background: none; padding: 0; font-size: 0.8em; }
+.markdown-body blockquote { border-left: 2px solid var(--accent); padding-left: 0.7em; color: var(--text-muted); margin: 0.3em 0; }
+.markdown-body table { border-collapse: collapse; margin: 0.3em 0; width: 100%; font-size: 0.9em; }
+.markdown-body th, .markdown-body td { border: 1px solid var(--border); padding: 0.3em 0.5em; text-align: left; }
+.markdown-body th { background: var(--accent-soft); font-weight: 600; }
+.markdown-body a { color: var(--accent); }
+.markdown-body hr { border: none; border-top: 1px solid var(--border); margin: 0.8em 0; }
+.markdown-body strong { font-weight: 650; }
+.markdown-body img { max-width: 100%; border-radius: 6px; }
+
+@keyframes fadeIn { from { opacity: 0; transform: translateY(6px); } to { opacity: 1; transform: translateY(0); } }
+@keyframes pulse-dot { 0%, 100% { opacity: 0.4; } 50% { opacity: 1; } }
+.animate-fade-in { animation: fadeIn 0.25s ease-out; }
+.animate-pulse-dot { animation: pulse-dot 1.4s infinite; }
